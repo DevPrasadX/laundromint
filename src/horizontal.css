@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow-y: visible;
+	overflow-x: hidden;
+	
+}
+
+#container {
+	height: 100vh;
+	/* set width based on sections */
+	width: 600%;
+	display: flex;
+    position: relative;
+	flex-wrap: nowrap;
+}
+
+.horizontal-section {
+    z-index: -1;
+	background-color: black;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 300vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.horizontal-section:nth-child(1) {
+   
+	background-image: url("https://ik.imagekit.io/athxbsw68/laundromint/image1.jpg?updatedAt=1709541257152");
+}
+.horizontal-section:nth-child(2) {
+	background-image: url("https://ik.imagekit.io/athxbsw68/laundromint/image2.jpg?updatedAt=1709541254732");
+}
+.horizontal-section:nth-child(3) {
+	background-image: url("https://ik.imagekit.io/athxbsw68/laundromint/image3.jpg?updatedAt=1709541255496");
+}
+.horizontal-section:nth-child(4) {
+	background-image: url("https://ik.imagekit.io/athxbsw68/laundromint/image4.jpg?updatedAt=1709541250188");
+}
+.horizontal-section:nth-child(5) {
+	background-image: url("https://ik.imagekit.io/athxbsw68/laundromint/image5.jpg?updatedAt=1709541253504");
+}
+.horizontal-section:nth-child(6) {
+	background-image: url("https://ik.imagekit.io/athxbsw68/laundromint/image6.jpg?updatedAt=1709541250512");
+}
+
+
+
+
+
+.heading {
+	font-family: "Oswald", sans-serif;
+	font-size: 2vw;
+	font-weight: 300;
+	color: white;
+	letter-spacing: 1vw;
+	text-transform: uppercase;
+}
