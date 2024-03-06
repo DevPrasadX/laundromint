@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./horizontal.css";
 import ImageSlider from "./Components/ImageSlider";
+
+import image0 from "./assets/images/image0.png";
 import image1 from "./assets/images/1.jpg";
 import image2 from "./assets/images/2a.jpg";
 import image3 from "./assets/images/2b.jpg";
@@ -296,7 +298,7 @@ const Horizontal = () => {
         <h1 className="text-center text-black font-semibold h-fit p-2 bg-slate-300 bg-opacity-25">
           The playful, light and happening <br /> vibe on the campus"
         </h1>
-        <img src={image1}></img>
+        <img src={image0}></img>
       </div>
       <div id="page2" ref={service2Ref}>
         <h1 className="text-center text-black font-semibold h-fit p-2 bg-slate-300 bg-opacity-25">
