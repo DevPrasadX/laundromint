@@ -6,8 +6,8 @@ import video from "../src/assets/logovideos.mp4";
 import campusimage from "../src/assets/campus_image.jpg";
 import "./App.css";
 import Navbar from "./navigation";
-import Horizontal from "./horizontalscroll";
 import Page1 from "./verticalscroll";
+import HorizontalScoll from "./HorizontalSroll";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -127,7 +127,7 @@ function App() {
         <>
           <Navbar ref={navbarRef} />
           {/* <Page1 /> */}
-          <Horizontal />{" "}
+          <HorizontalScoll />{" "}
         </>
       ) : (
         ""
