@@ -18,7 +18,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 // import Cookies from "../components/Cookies";
 
-import RemoteVideo from "./ship-videos/Remote_v2.mp4";
+import RemoteVideo from "./assets/infinity/infinity_video.mp4";
 import Decarbonize from "./ship-videos/iStock-1420272956_Decarbo.mp4";
 import FuelPerformance from "./ship-videos/iStock-1215695584_Fuel Performance.mp4";
 import ConditionMonitor from "./ship-videos/iStock-641350596_Condition Monitoring.mp4";
@@ -38,8 +38,11 @@ import image8 from "./assets/images/8.png";
 import image9 from "./assets/images/9.png";
 import image10 from "./assets/images/10.png";
 
-import infinity1 from "./assets/infinity/infinity.jpeg";
+import infinity from "./assets/infinity/infinity.jpeg";
 import infinityVideo from "./assets/infinity/infinity_video.mp4";
+import Spinning from "./Components/spinning";
+
+import campus_image from "./assets/campus_image.jpg";
 
 // init Swiper:
 
@@ -428,6 +431,10 @@ const HorizontalScroll = () => {
       }
     }
   }, []);
+
+
+
+
   return (
     <div>
       <div className="">
@@ -446,7 +453,7 @@ const HorizontalScroll = () => {
             modules={[Navigation, Pagination, EffectFade, Mousewheel]}
             effect="fade"
             autoplay={{
-              delay: 2100,
+              delay: 1100,
               disableOnInteraction: true,
             }}
             speed={1000}
@@ -464,8 +471,14 @@ const HorizontalScroll = () => {
             }}
             onSwiper={(swiper) => setSwiper(swiper)}
             onReachEnd={() => {}}
+            // allowSlidePrev={false}
             touchReleaseOnEdges={true}
           >
+            <SwiperSlide className="swiper-slide relative sm:block">
+              <img className="sm:hidden block" src={campus_image} alt="" />
+              <img className="hidden sm:block " src={campus_image} alt="" />
+            </SwiperSlide>
+
             <SwiperSlide className="swiper-slide relative sm:block">
               <img className="sm:hidden block" src={image1} alt="" />
               <img className="hidden sm:block " src={image1} alt="" />
@@ -486,7 +499,35 @@ const HorizontalScroll = () => {
                 >
                   <h3
                     id="content__1__heading"
-                    className="text-[50px] font-semibold text-center  text-[#00C6C6] bg-gray-500 bg-opacity-15 p-3"
+                    className="text-[45px] leading-[50px] font-inter font-semibold text-center  text-[#d0ffff] bg-gray-500 bg-opacity-15 p-3"
+                  >
+                    The playful, light and happening vibe on the campus
+                  </h3>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide className="swiper-slide relative sm:block">
+              <img className="sm:hidden block" src={image1} alt="" />
+              <img className="hidden sm:block " src={image1} alt="" />
+              <div
+                id="content__1"
+                className="hidden absolute top-[65%]  left-1/2 -translate-x-1/2 sm:flex flex-col w-full max-w-[960px] sm:flex-row p-6 gap-12 z-[100]"
+              >
+                {/* <div id="content__1__img">
+                  <img
+                    className="h-[84px] object-contain mx-auto sm:mx-0"
+                    src={logo}
+                    alt=""
+                  />
+                </div> */}
+                <div
+                  id="content__1__text"
+                  className="space-y-2 max-w-4xl text-center sm:text-left "
+                >
+                  <h3
+                    id="content__1__heading"
+                    className="text-[45px] leading-[50px] font-inter font-semibold text-center  text-[#d0ffff] bg-gray-500 bg-opacity-15 p-3"
                   >
                     The playful, light and happening vibe on the campus
                   </h3>
@@ -514,7 +555,7 @@ const HorizontalScroll = () => {
                 >
                   <h3
                     id="content__1__heading"
-                    className="text-[50px] font-semibold text-center  text-[#00C6C6] bg-gray-500 bg-opacity-15 p-3"
+                    className="text-[45px] leading-[50px] font-inter font-semibold text-center  text-[#d0ffff] bg-gray-500 bg-opacity-15 p-3"
                   >
                     Lectures and practical engagement of group of students
                   </h3>
@@ -542,7 +583,7 @@ const HorizontalScroll = () => {
                 >
                   <h3
                     id="content__1__heading"
-                    className="text-[50px] font-semibold text-center  text-[#00C6C6] bg-gray-500 bg-opacity-15 p-3"
+                    className="text-[45px] leading-[50px] font-inter font-semibold text-center  text-[#d0ffff] bg-gray-500 bg-opacity-15 p-3"
                   >
                     Networking and event participation via recreational clubs
                   </h3>
@@ -570,7 +611,7 @@ const HorizontalScroll = () => {
                 >
                   <h3
                     id="content__1__heading"
-                    className="text-[50px] font-semibold text-center  text-[#00C6C6] bg-gray-500 bg-opacity-15 p-3"
+                    className="text-[45px] leading-[50px] font-inter font-semibold text-center  text-[#d0ffff] bg-gray-500 bg-opacity-15 p-3"
                   >
                     Enjoying lunch with friends in canteen, reaching hostel and
                     relaxing and talking with roomies about the day
@@ -598,7 +639,7 @@ const HorizontalScroll = () => {
                 >
                   <h3
                     id="content__1__heading"
-                    className="text-[50px] font-semibold text-center  text-[#00C6C6] bg-gray-500 bg-opacity-15 p-3"
+                    className="text-[45px] leading-[50px] font-inter font-semibold text-center  text-[#d0ffff] bg-gray-500 bg-opacity-15 p-3"
                   >
                     The day to day efforts a student ideally takes towards
                     academic studies and revision
@@ -623,61 +664,22 @@ const HorizontalScroll = () => {
                 </div> */}
                 <div
                   id="content__1__text"
-                  className="space-y-2 w-full text-center sm:text-left "
+                  className="space-y-2 w-full text-center sm:text-center"
                 >
                   <h3
                     id="content__1__heading"
-                    className="text-[50px] font-semibold text-center  text-[#00C6C6] bg-gray-500 bg-opacity-30 p-2"
+                    className="text-[45px] leading-[50px] w-full font-semibold text-center  text-[#d0ffff] bg-gray-500 bg-opacity-30 p-2 font-inter"
                   >
-                    And finally, the Inescapable cloth care management by
+                    And finally, the Inescapable cloth care management by <br />
                     students in their room or through incomplete Laundromats
                   </h3>
                 </div>
               </div>
             </SwiperSlide>
-
-            <SwiperSlide
-              className="overflow-hidden swiper-slide relative relative flex justify-center items-center bg-white"
-              ref={ref}
-            >
-              <video
-                className={`hidden sm:block mt-14 h-full items-center sm:block swiper-zoom-container h-[100vh] w-full `}
-                muted
-                playsInline
-                ref={videoRef2}
-                style={{ objectFit: "cover" }} // Set object fit to cover
-                onLoadedData={(event) => {
-                  event.target.currentTime = 0;
-                }}
-              >
-                <source
-                  // src="https://ik.imagekit.io/athxbsw68/Black_1_3%20-%20Trim%20-%20Trim.mp4?updatedAt=1707372504122"
-                  src={infinityVideo}
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
-              <img
-                className="sm:hidden md:hidden block w-full h-auto"
-                src={image3}
-                alt=""
-              />
-              <div
-                id="content__2"
-                className="sm:hidden md:hidden  block absolute top-[30%] right-[10%] left-[10%] z-50 -translate-y-1/2"
-              >
-                <h3 className="text-4xl font-semibold text-orange-600 text-center">
-                  Digital Platform
-                  <br />
-                  For Global Maritime
-                </h3>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide className="swiper-slide relative"></SwiperSlide>
           </Swiper>
         </section>
       </div>
+
       <div className="bg-black">
         <section
           ref={sectionRefs}
@@ -691,9 +693,6 @@ const HorizontalScroll = () => {
               id="service__1"
               className="bg-white-600 relative h-[50vh] sm:h-screen w-full bg-white overflow-y-hidden mx-auto"
             >
-              <h1 className="text-xl font-semibold lg:text-3xl text-center text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase">
-                Remote Maintainance
-              </h1>
               <video
                 className="w-full h-full object-cover"
                 src={RemoteVideo}
@@ -709,22 +708,6 @@ const HorizontalScroll = () => {
               description="Smart Ship Hub Remote gives vessel owners, operators, charter parties and insurers the tools to manage any vessel in real time. Optimize performance and fuel consumption according to current sea and weather conditions. Diagnose equipment and machinery condition with accurate predictive maintenance tools – live from the shore. Enhance efficiency with remote video streams, alerts, alarms and escalations. Accurately predict arrival at port to aid transfer logistics and minimize time spent at anchor and in port."
             /> */}
 
-            <section
-              ref={service2Ref}
-              id="service__2"
-              className="relative h-[50vh] sm:h-screen w-full bg-white overflow-y-hidden mx-auto"
-            >
-              <h1 className="text-xl font-semibold lg:text-3xl text-center text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase">
-                Decarbonization
-              </h1>
-              <video
-                className="w-full h-full object-cover"
-                src={Decarbonize}
-                autoPlay
-                loop
-                muted
-              ></video>
-            </section>
             {/* <FeatureSection
               service="Reduce Carbon Footprint"
               description="Digitalization improves ship-shore communications for reporting current carbon intensity and maturity in vessel decarbonization. Smart Ship© Hub's performance advisory can show you how to effectively move forward with decarbonization, monitoring and measuring vessel CO2 emissions. Smart Ship© Hub provides quick-to-deploy maritime digitalization technologies from a single unified platform to ensure zero-emission commercial vessels operate on deep-sea trade routes."
@@ -815,6 +798,8 @@ const HorizontalScroll = () => {
           </div>
         </section>
       </div>
+
+      {/* <Spinning /> */}
     </div>
   );
 };

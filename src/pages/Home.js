@@ -21,7 +21,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import Cookies from "../components/Cookies";
 
-import RemoteVideo from "../ship-videos/Remote_v2.mp4";
+import RemoteVideo from "../assets/infinity/infinity_video.mp4";
 import Decarbonize from "../ship-videos/iStock-1420272956_Decarbo.mp4";
 import FuelPerformance from "../ship-videos/iStock-1215695584_Fuel Performance.mp4";
 import ConditionMonitor from "../ship-videos/iStock-641350596_Condition Monitoring.mp4";
@@ -527,6 +527,7 @@ const Home = () => {
               </div>
             </SwiperSlide>
 
+            {/* Video  */}
             <SwiperSlide
               className="overflow-hidden swiper-slide relative relative flex justify-center items-center bg-black"
               ref={ref}
@@ -535,6 +536,9 @@ const Home = () => {
                 className="sm:hidden md:hidden block w-full h-auto"
                 src="https://ik.imagekit.io/athxbsw68/Frame%2011.jpg?updatedAt=1707288999040"
                 alt=""
+                onLoad={() => {
+
+                }}
               />
               <div
                 id="content__2"
@@ -548,7 +552,7 @@ const Home = () => {
               </div>
 
               <video
-                className={`hidden sm:block mt-14 h-full items-center sm:block swiper-zoom-container bg-black`}
+                className={`hidden sm:block mt-14 h-full items-center swiper-zoom-container bg-black`}
                 muted
                 playsInline
                 ref={videoRef2}
@@ -594,9 +598,6 @@ const Home = () => {
               id="service__1"
               className="bg-white-600 relative h-[50vh] sm:h-screen w-full bg-white overflow-y-hidden mx-auto"
             >
-              <h1 className="text-xl font-semibold lg:text-3xl text-center text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase">
-                Remote Maintainance
-              </h1>
               <video
                 className="w-full h-full object-cover"
                 src={RemoteVideo}
@@ -606,115 +607,12 @@ const Home = () => {
               ></video>
             </section>
 
-            <FeatureSection
-              className="bg-white"
-              service="Remote Fleet Management"
-              description="Smart Ship Hub Remote gives vessel owners, operators, charter parties and insurers the tools to manage any vessel in real time. Optimize performance and fuel consumption according to current sea and weather conditions. Diagnose equipment and machinery condition with accurate predictive maintenance tools – live from the shore. Enhance efficiency with remote video streams, alerts, alarms and escalations. Accurately predict arrival at port to aid transfer logistics and minimize time spent at anchor and in port."
-            />
+            
+           
+           
+            {/* <News />
 
-            <section
-              ref={service2Ref}
-              id="service__2"
-              className="relative h-[50vh] sm:h-screen w-full bg-white overflow-y-hidden mx-auto"
-            >
-              <h1 className="text-xl font-semibold lg:text-3xl text-center text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase">
-                Decarbonization
-              </h1>
-              <video
-                className="w-full h-full object-cover"
-                src={Decarbonize}
-                autoPlay
-                loop
-                muted
-              ></video>
-            </section>
-            <FeatureSection
-              service="Reduce Carbon Footprint"
-              description="Digitalization improves ship-shore communications for reporting current carbon intensity and maturity in vessel decarbonization. Smart Ship© Hub's performance advisory can show you how to effectively move forward with decarbonization, monitoring and measuring vessel CO2 emissions. Smart Ship© Hub provides quick-to-deploy maritime digitalization technologies from a single unified platform to ensure zero-emission commercial vessels operate on deep-sea trade routes."
-            />
-            <section
-              ref={service3Ref}
-              id="service__3"
-              className="relative h-[50vh] sm:h-screen w-full bg-white overflow-y-hidden mx-auto"
-            >
-              <h1 className="text-xl font-semibold lg:text-3xl text-center text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase">
-                Condition Monitoring
-              </h1>
-              <video
-                className="w-full h-full object-cover"
-                src={ConditionMonitor}
-                autoPlay
-                loop
-                muted
-              ></video>
-            </section>
-            <FeatureSection
-              service="Remote Vessel Performance"
-              description="Savings through On- demand maintenance  alert based on live machinery data. Predictive  diagnostics leading to deferred maintenance &  condition based procurement. Smart Ship© Hub encourages a proactive approach in which early study of the vessel machinery condition and health is initiated while it is still operating normally."
-            />
-            <section
-              ref={service4Ref}
-              id="service__4"
-              className="relative h-[50vh] sm:h-screen w-full bg-white overflow-y-hidden mx-auto"
-            >
-              <h1 className="text-xl font-semibold lg:text-3xl text-center text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase">
-                Fuel Performance
-              </h1>
-              <video
-                className="w-full h-full object-cover"
-                src={FuelPerformance}
-                autoPlay
-                loop
-                muted
-              ></video>
-            </section>
-            <FeatureSection
-              service="Save 3-15% on Fuel Cost"
-              description="Smart Ship Hub Insights provides predictive fuel consumption based on current and forecast weather and sea conditions, vessel condition, laden state and the route. Historical and vessel class data enables comparison and correlation between fuel and various other vessel parameters. Smart Ship Hub Insights enables complete clarity on fuel utilization and optimization in real time."
-            />
-            <section
-              ref={service5Ref}
-              id="service__5"
-              className="relative h-[50vh] sm:h-screen w-full bg-white overflow-y-hidden mx-auto"
-            >
-              <h1 className="text-xl font-semibold lg:text-3xl text-center text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase">
-                ME Performance
-              </h1>
-              <video
-                className="w-full h-full object-cover"
-                src={MEPerformance}
-                autoPlay
-                loop
-                muted
-              ></video>
-            </section>
-            <FeatureSection
-              service="Vessel Health Index"
-              description="Machinery condition and health monitoring involve continuously observing a set of voyage metrics and shipping process variables that indicate the state of the monitored vessel. It is crucial to conduct timely maintenance activities for the vessel's structural integrity and stability to comply with safety standards and environmental regulations. "
-            />
-            <section
-              ref={service6Ref}
-              id="service__6"
-              className="relative h-[50vh] sm:h-screen w-full bg-white overflow-y-hidden mx-auto"
-            >
-              <h1 className="text-xl font-semibold lg:text-3xl text-center text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase">
-                Voyage Performance
-              </h1>
-              <video
-                className="w-full h-full object-cover"
-                src={VoyagePerformance}
-                autoPlay
-                loop
-                muted
-              ></video>
-            </section>
-            <FeatureSection
-              service="Dollar Per Nautical Per Mile Savings"
-              description="Smart Ship© Hub is leveraging high-frequency data through its digital platform and use the data for weather routing and route optimisation, charter party compliance and consumption management, and decarbonisation measures across the fleet. Smart Ship© Hub is a Unified Digital Platform: for Chartering & Commercial teams, Shore-based Voyage Operators, Vessel Performance for Ship Management teams. "
-            />
-            <News />
-
-            <Footer />
+            <Footer /> */}
           </div>
         </section>
       </div>
